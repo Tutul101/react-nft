@@ -1,0 +1,126 @@
+.free {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  .container {
+    padding: 1rem 2rem;
+    height: max-content;
+    border-radius: 0;
+
+    .background {
+      z-index: -1;
+
+      .ellipse {
+        position: relative;
+      }
+      .pink {
+        position: absolute;
+        height: 100%;
+        top: 0%;
+        left: -15%;
+        width: 75%;
+        background-color: var(--pink);
+        filter: blur(50px);
+      }
+      .orange {
+        position: absolute;
+        height: 100%;
+        right: -20%;
+        top: 0%;
+        width: 75%;
+        background-color: var(--orange);
+        filter: blur(50px);
+      }
+    }
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      padding: 3rem 0;
+      font-size: 16px;
+      gap: 3.6rem;
+
+      h2 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .cards {
+    position: absolute;
+    top: 0px;
+    right: 40%;
+    display: flex;
+
+    .card1 {
+      zoom: 0.3;
+      position: absolute;
+      top: 0;
+      transform: rotate(-10deg);
+      z-index: 3;
+      font-size: 1rem;
+
+      .card-image {
+        img {
+          height: 18rem;
+          width: 22rem;
+        }
+      }
+    }
+    .card2 {
+      zoom: 0.3;
+      position: absolute;
+      left: 10rem;
+      transform: rotate(5deg);
+      font-size: 1.2rem;
+      .card-image {
+        img {
+          height: 18rem;
+          width: 22rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .free {
+    position: relative;
+    margin: 5rem 4rem;
+
+    .container {
+      padding: 8rem 4rem;
+      height: max-content;
+      .content {
+        gap: 6rem;
+
+        .image {
+          img {
+            height: 10rem;
+          }
+        }
+        h2 {
+          font-size: 4.5rem;
+        }
+        p {
+          font-size: 3.5rem;
+        }
+      }
+    }
+
+    .cards {
+      position: absolute;
+      right: 40%;
+
+      .card1 {
+        zoom: 0;
+      }
+      .card2 {
+        zoom: 0;
+      }
+    }
+  }
+}
