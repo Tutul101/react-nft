@@ -1,0 +1,89 @@
+.super-rare {
+  padding: 1rem 2rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+      color: var(--accent-color1);
+      font-size: 3.3rem;
+    }
+
+    .description {
+      color: var(--accent-color3);
+      font-size: 1.8rem;
+      a {
+        color: var(--accent-color3);
+        font-size: inherit;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    width: 100vw;
+    gap: 3.2rem;
+    padding-left: 2rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      zoom: 0.7;
+
+      &:last-of-type {
+        margin-right: 6rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .super-rare {
+    .title-container {
+      .title {
+        font-size: 4rem;
+        gap: 1.6rem;
+      }
+      .description {
+        font-size: 2.4rem;
+      }
+    }
+    .cards {
+      display: flex;
+      overflow-x: scroll;
+      gap: 3rem;
+      padding-left: 0rem;
+
+      .card {
+        zoom: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .super-rare {
+    .cards {
+      display: flex;
+      justify-content: space-evenly;
+      overflow-x: scroll;
+      gap: 3rem;
+      padding-left: 0rem;
+
+      .card {
+        cursor: pointer;
+        zoom: 1;
+      }
+    }
+  }
+}
