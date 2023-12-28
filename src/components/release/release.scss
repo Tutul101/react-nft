@@ -1,0 +1,127 @@
+.releases {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin: 5rem 0;
+
+  .release {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
+
+    .content {
+      padding: 10rem 8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+
+      .title {
+        font-size: 3.2rem;
+      }
+
+      .description {
+        font-size: 2rem;
+        a {
+          color: black;
+          font-weight: bold;
+          font-size: 2rem;
+        }
+      }
+
+      .link {
+        font-size: 2rem;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        svg {
+          font-size: 2rem;
+        }
+      }
+    }
+    .image {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      img {
+        height: 40rem;
+      }
+      .ellipse {
+        position: absolute;
+        height: 20rem;
+        width: 28rem;
+        border-radius: 100%;
+        filter: blur(100px);
+        bottom: -40%;
+        right: 0;
+      }
+      .pink {
+        background-color: var(--pink);
+      }
+    }
+    .card-container {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ellipse {
+        position: absolute;
+        height: 20rem;
+        width: 28rem;
+        border-radius: 100%;
+        filter: blur(100px);
+        bottom: -10%;
+        left: -5%;
+      }
+      .orange {
+        background-color: var(--orange);
+      }
+    }
+  }
+  .orange {
+    background-color: var(--orange);
+  }
+  .green {
+    background-color: var(--green);
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+  .releases {
+    margin: 0;
+    gap: 0;
+
+    .release {
+      border-radius: 0;
+      grid-template-columns: 1fr;
+      padding: 1rem 2rem;
+      gap: 2rem;
+
+      &:nth-of-type(1) {
+        .image {
+          grid-row: 1;
+        }
+      }
+      .content {
+        padding: 3rem 0;
+      }
+      .image {
+        zoom: 0.5;
+      }
+      .card-container {
+        zoom: 0.5;
+      }
+      .ellipse {
+        display: none !important;
+      }
+    }
+  }
+}
