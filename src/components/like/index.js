@@ -8,7 +8,7 @@ const Like = () => {
     <div className="like">
       <div className="container">
         <div className="content">
-          <div clasName="image">
+          <div className="image">
             <img src={eth1} alt="eth1" />
           </div>
           <h2 className="title">An NFT like no other</h2>
@@ -24,7 +24,7 @@ const Like = () => {
         </div>
 
         <div className="content">
-          <div clasName="image">
+          <div className="image">
             <img src={eth2} alt="eth1" />
           </div>
           <h2 className="title">An NFT like no other</h2>

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Clients from "./components/clients";
 import Footer from "./components/footer";
 import Free from "./components/free";
@@ -14,7 +15,7 @@ import "./scss/index.scss";
 function App() {
   return (
     <div className="app-container">
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Navbar />
       <Home />
       <Free />
