@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import Clients from "./components/clients";
 import Footer from "./components/footer";
@@ -14,6 +14,10 @@ import SuperRare from "./components/superrare";
 import "./scss/index.scss";
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+  const changeTheme = () => {
+    theme === "dark" ? setTheme("light") : setTheme("dark");
+  };
   useEffect(() => {
     window.setTimeout(() => {
       const home = document.getElementsByClassName("home");
@@ -36,9 +40,9 @@ function App() {
     registerAnimation();
   }, []);
   return (
-    <div className="app-container">
+    <div className="app-container" data-theme={theme}>
       <ScrollToTop />
-      <Navbar />
+      <Navbar changeTheme={changeTheme} currentTheme={theme} />
       <Home />
       <Free />
       <Clients />

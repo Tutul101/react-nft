@@ -23,6 +23,12 @@
         width: 1.6rem;
         height: 1.6rem;
       }
+      .dark {
+        color: black;
+      }
+      .light {
+        color: yellow;
+      }
     }
     .toggle {
       display: block;
@@ -132,6 +138,16 @@
     .theme-btn {
       margin-left: 4rem;
       cursor: pointer;
+    }
+  }
+}
+
+[data-theme="light"] {
+  .brand-container {
+    .brand-logo {
+      img {
+        filter: brightness(0);
+      }
     }
   }
 }

@@ -7,7 +7,7 @@ import { BsFillMoonFill } from "react-icons/bs";
 import logo from "../../assets/logo.png";
 import "./navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ currentTheme, changeTheme }) => {
   const [navState, setNavState] = useState(false);
   return (
     <nav className="nav-wrapper">
@@ -72,7 +72,13 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <ImSun className="theme-btn" />
+          <div onClick={changeTheme}>
+            {currentTheme === "dark" ? (
+              <ImSun className="theme-btn light" />
+            ) : (
+              <BsFillMoonFill className="theme-btn dark" />
+            )}
+          </div>
         </div>
       </div>
     </nav>
